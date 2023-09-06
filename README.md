@@ -42,19 +42,19 @@ paragraghs, blocks of text
 anchor tag
 
 ### < div >
-geberic block element
+generic block element
 no content
-shud ponly be used when no other semay=tictag is available
+shud only be used when no other semantic tag is available
 
-<span>
+### < span >
 -generic inline element
 - noeffect with how things are laid out
 _allows u tp add css without chnaging the sematic meaning of that paragrpgh
 
-<br>
+### < br >
 useful for a line break
 
-<img>
+### < img >
 
 
 
