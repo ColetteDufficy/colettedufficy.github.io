@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500;700;900&family=Roboto:wght@100;300;400&display=swap');
+
+
+/* variables in css */
+:root {
+    --primary: #03a6b5;
+    --secondary: white;
+    --spacing: 4rem;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 
+.neutral-theme {
+    background-color: var(--primary);
+    --button-color: var(--primary);
+    --button-hover-color: white;
+}
+*/
+
+/* 
+.primary-theme {
+    color: white;
+    background-color: var(--primary);
+    --button-color: white;
+    --button-hover-color: var(--primary);
+} */
+
+
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* the above make it centre vertically */
+    justify-content: center; 
+    /* the above makes it centre horizontally  */
+    padding: 2rem;
+}
+
+
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: clamp(2rem, 5vw, 6rem);
+    font-weight: 700;
+    line-height: 1.4em;
+}
+
+
+h2 {
+    margin-bottom: var(--spacing);
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+section {
+    padding: var(--spacing)
+}
+
+
+.heading-highlight {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.primary-theme-contact {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 700;
+}
+
+
+.keywords {
+    font-weight: 600;
+}
+
+/* main button */
+.button {
+    width: max-content;
+    padding: 1rem;
+    border: 1px solid var(--primary);
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--primary);
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+/* main button */
+/* hover state */
+.button:hover {
+    color: white;
+    background-color: var(--primary);
+    letter-spacing: 5px;
+}
+
+.article-button {
+    display: inline-block;
+    width: max-content;
+    padding: 1rem;
+    padding-bottom: 1rem;
+    border: 1px solid var(--primary);
+    font-size: .7rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--primary);
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    margin-bottom: var(--spacing);
+}
+
+/* hover state */
+.article-button:hover {
+    color: white;
+    background-color: var(--primary);
+    letter-spacing: 5px;
+}
+
+/* little triangle in the Find Out About Me button */
+.header-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* sudo selctor - alwasy requries content elelemtn whether ur using it or not */
+/* the little triangle sitting onthe button */
+.header-link::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: .5rem .5rem 0 .5rem;
+    border-color: var(--primary) transparent transparent transparent;
+}
+
+.header-link:hover::after {
+    border-color: white transparent transparent transparent;
+}
+
+
+.button-reverse {
+    display: inline-block;
+    padding: 1rem;
+    border: 1px solid white;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+.button-reverse:hover {
+    background-color: white;
+    color:  var(--primary);
+    letter-spacing: 5px;
+} 
+
+.about {
+    padding: var(--spacing);
+    color: white;
+    background-color: var(--primary);
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.about::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--primary);
+    border-right: 100vw solid transparent;
+}
+
+
+
+/* my photo */
+.about-img {
+    max-width: 350px;
+    margin-bottom: 1rem;
+    border-radius: 10%;
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.about-img:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+
+p {
+    margin-bottom: 1em;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.about-info {
+    max-width: 960px;
+    margin: 0 auto;     /* zero top and botton, and auto left and right - sitting in middle vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing);
+}
+
+blockquote {
+    margin-top: var(--spacing);
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+}
+
+cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+
+
+
+/* ********PROJECTS SECTION ****** */
+
+article {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.article {
+    padding: 0 var(--spacing) 0 var(--spacing);
+    color: var(--primary);
+    font-weight: 300;
+    & p {
+        color: #333;
+        font-weight: 500;
+    }
+}
+
+.article-img {
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+footer {
+    background-color: #333;
+    padding: var(--spacing);
+    color: white;
+    & p {
+        text-align: center;
+    }
+}
+
+.primary-theme-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+    & p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    & h2 {
+        margin-bottom: 1rem;
+    }
+}
+.primary-theme-contact::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -100px;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid var(--primary);
+    border-left: 100vw solid transparent;
+}
+
+
+
+.social {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: var(--spacing);
+}
+
+.social-link{
+    display: block;
+    width: 60px;
+    height: 60px;
+    color: transparent;
+    font-size: 1px;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.social-link:hover {
+     transform: scale(1.2);
+}
+
+.gh {
+    background-image: url('screengrabs/github-grey.png');    
+}
+
+.li {
+    background-image: url('screengrabs/linkedin-grey.png');
+}
+
+
+@media (min-width: 800px) {
+    .about-info {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    article {
+        flex-direction: row;
+        max-width: 960px;
+        gap: 2rem;
+        margin: 0 auto var(--spacing);
+    }
+    .article-img {
+        max-width: 350px;
+        object-fit: cover;
+    }
+}
+
+
+/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* if i wanted my webpage to PRINT nicely */
+/* @media print {
+
+} */
