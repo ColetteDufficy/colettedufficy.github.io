@@ -74,6 +74,12 @@ h2 {
     font-weight: 300;
 }
 
+.projects {
+    padding: var(--spacing);
+    color: var(--primary);
+    font-weight: 300;
+}
+
 .about-img {
     max-width: 350px;
     margin-bottom: 1rem;
@@ -87,6 +93,11 @@ h2 {
 .about-img:hover {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
+}
+
+.projects-img {
+    max-width: 450px;
+    margin-bottom: 1rem;
 }
 
 p {
