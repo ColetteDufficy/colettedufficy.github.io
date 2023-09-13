@@ -9,13 +9,9 @@
 }
 
 
-
-
 body {
     font-family: 'Montserrat', sans-serif;
-    /* color: #333; */
 }
-
 
 html {
     scroll-behavior: smooth;
@@ -61,7 +57,6 @@ h1 {
 }
 
 
-
 h2 {
     margin-bottom: var(--spacing);
     text-align: center;
@@ -86,14 +81,19 @@ section {
     font-weight: 700;
 }
 
+.primary-theme-contact {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 700;
+}
+
 
 .keywords {
     font-weight: 600;
 }
 
-
+/* main button */
 .button {
-    display: inline-block;
     width: max-content;
     padding: 1rem;
     border: 1px solid var(--primary);
@@ -107,6 +107,7 @@ section {
     transition: 0.2s;
 }
 
+/* main button */
 /* hover state */
 .button:hover {
     color: white;
@@ -114,6 +115,32 @@ section {
     letter-spacing: 5px;
 }
 
+.article-button {
+    display: inline-block;
+    width: max-content;
+    padding: 1rem;
+    padding-bottom: 1rem;
+    border: 1px solid var(--primary);
+    font-size: .7rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--primary);
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    margin-bottom: var(--spacing);
+}
+
+/* hover state */
+.article-button:hover {
+    color: white;
+    background-color: var(--primary);
+    letter-spacing: 5px;
+}
+
+/* little triangle in the Find Out About Me button */
 .header-link {
     display: flex;
     justify-content: center;
@@ -154,7 +181,7 @@ section {
 .button-reverse:hover {
     background-color: white;
     color:  var(--primary);
-    letter-spacing: 6px;
+    letter-spacing: 5px;
 } 
 
 .about {
@@ -162,8 +189,24 @@ section {
     color: white;
     background-color: var(--primary);
     font-weight: 300;
+    position: relative;
+    margin-bottom: 100px;
 }
 
+.about::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--primary);
+    border-right: 100vw solid transparent;
+}
+
+
+
+/* my photo */
 .about-img {
     max-width: 350px;
     margin-bottom: 1rem;
@@ -219,12 +262,14 @@ article {
     flex-direction: column-reverse;
 }
 
-
-
-.projects {
-    padding: var(--spacing);
+.article {
+    padding: 0 var(--spacing) 0 var(--spacing);
     color: var(--primary);
     font-weight: 300;
+    & p {
+        color: #333;
+        font-weight: 500;
+    }
 }
 
 .article-img {
@@ -240,6 +285,34 @@ footer {
         text-align: center;
     }
 }
+
+.primary-theme-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+    & p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    & h2 {
+        margin-bottom: 1rem;
+    }
+}
+.primary-theme-contact::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -100px;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid var(--primary);
+    border-left: 100vw solid transparent;
+}
+
+
 
 .social {
     display: flex;
@@ -262,12 +335,12 @@ footer {
      transform: scale(1.2);
 }
 
-.li {
-    background-image: url('screengrabs/github_white.png');    
+.gh {
+    background-image: url('screengrabs/github-grey.png');    
 }
 
-.gh {
-    background-image: url('screengrabs/linkedin.png');
+.li {
+    background-image: url('screengrabs/linkedin-grey.png');
 }
 
 
