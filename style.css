@@ -345,6 +345,7 @@ footer {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    align-items:center;
     margin-bottom: var(--spacing);
 }
 
@@ -353,9 +354,18 @@ footer {
     width: 60px;
     height: 60px;
     color: transparent;
+    /* font-size: .3px; */
+    /* background-repeat: no-repeat; */
+    background-size: 60px;
+}
+.social-link-up{
+    display: block;
+    width: 60px;
+    height: 60px;
+    color: transparent;
     font-size: 1px;
     background-repeat: no-repeat;
-    background-size: 60px;
+    background-size: 53px;
 }
 
 .social-link:hover {
@@ -368,6 +378,10 @@ footer {
 
 .li {
     background-image: url('screengrabs/linkedin-grey.png');
+}
+
+.up {
+    background-image: url('screengrabs/up_icon.png');
 }
 
 
